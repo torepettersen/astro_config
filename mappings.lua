@@ -41,9 +41,17 @@ return {
     ["<leader>tv"] = false,
 
     ["<leader>t"] = { desc = "Test" },
-    ["<leader>tt"] = { function() require("neotest").run.run() end, desc = "Run Nearest" },
+    ["<leader>tt"] = {
+      function()
+        local row = unpack(vim.api.nvim_win_get_cursor(0))
+        require("toggleterm").exec("mix test " .. vim.fn.expand "%" .. ":" .. row)
+      end,
+      desc = "Run in terminal",
+    },
+    ["<leader>tr"] = { function() require("neotest").run.run() end, desc = "Run Nearest" },
     ["<leader>tf"] = { function() require("neotest").run.run(vim.fn.expand "%") end, desc = "Run File" },
     ["<leader>ts"] = { function() require("neotest").summary.toggle() end, desc = "Toggle Summary" },
+    ["<leader>to"] = { function() require("neotest").output.open { enter = true } end, desc = "Show Output" },
     ["<leader>th"] = { function() require("neotest").run.stop() end, desc = "Stop" },
 
     -- Projectionist
