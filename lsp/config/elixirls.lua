@@ -1,5 +1,5 @@
 return {
-  cmd = { "/home/tore/workspace/elixir-ls/release/language_server.sh" },
+  cmd = { os.getenv "HOME" .. "/.elixir_ls/language_server.sh" },
   settings = {
     elixirLS = {
       dialyzerEnabled = false,
