@@ -25,7 +25,25 @@ return {
     ["<leader>fW"] = false,
 
     ["<leader>f"] = { "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-    ["<leader>g"] = { "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
+    ["<leader>g"] = { "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
+
+    -- Neotree
+    ["<leader>e"] = { "<cmd>Neotree float %:p:h:h %:p<cr>", desc = "Open Explorer" },
+    ["<leader>be"] = { "<cmd>Neotree float buffers<cr>", desc = "Buffer Explorer" },
+
+    -- Buffers
+    ["<leader>bb"] = false,
+    ["<leader>bd"] = false,
+    ["<leader>bl"] = false,
+    ["<leader>bp"] = false,
+    ["<leader>br"] = false,
+    ["<leader>bse"] = false,
+    ["<leader>bsi"] = false,
+    ["<leader>bsm"] = false,
+    ["<leader>bsp"] = false,
+    ["<leader>bsr"] = false,
+    ["<leader>b\\"] = false,
+    ["<leader>b|"] = false,
 
     -- Terminal
     ["<C-t>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
